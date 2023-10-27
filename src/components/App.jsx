@@ -1,5 +1,10 @@
 import user from './Profile/user.json';
 import { Profile } from './Profile/Profile';
+import data from './Statistics/data.json';
+import { Statistics } from './Statistics/Statistics';
+import friends from './Friends/FriendList/friends.json';
+import {FriendList} from './Friends/FriendList/FriendList';
+import { FriendListItem } from './Friends/FriendListItem/FriendListItem';
 
 export const App = () => {
   return (
@@ -10,7 +15,20 @@ export const App = () => {
   location={user.location}
   avatar={user.avatar}
   stats={user.stats}/>
+
+      <Statistics title="Upload stats" stats={data} />
+
+      <FriendList friends={friends} >
+           <FriendListItem   
+              key={friends.id}
+              avatar={friends.avatar}
+              name={friends.name}
+              isOnline={friends.isOnline} />
+      </FriendList>
+
+  
     </div>
+
   );
 };
 
