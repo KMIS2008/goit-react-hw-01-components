@@ -20,9 +20,8 @@ export const App = () => {
 
       <Statistics title="Upload stats" stats={data} />
 
-      <FriendList friends={friends} >
+      <FriendList friends={friends}  key={friends.id}>
            <FriendListItem   
-              key={friends.id}
               avatar={friends.avatar}
               name={friends.name}
               isOnline={friends.isOnline} />
