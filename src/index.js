@@ -11,7 +11,11 @@ const theme = {
     background: '#D3D3D3',
     gray: "#808080",
     blue: '#F0F8FF',
+    darkblue: '#4e5dda',
     border: '#d8d1d1',
+    rose: '#f2ead1',
+    purpel: 'rgb(190 69 163)',
+    red: 'rgb(231 13 13)',
   },
 
   spacing: value => `${value * 5}px`,
