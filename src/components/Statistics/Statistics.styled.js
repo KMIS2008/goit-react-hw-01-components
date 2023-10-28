@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const getBackgroundColor = props => {
-    switch (props.$label) {
-        case '.docx':
+    switch (props.$isOnline) {
+        case 'false':
           return props.theme.colors.darkblue;
         case '.pdf':
           return props.theme.colors.purpel;

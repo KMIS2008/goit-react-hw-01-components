@@ -4,7 +4,7 @@ export const ProfileWrapper = styled.div`
 width: 400px;
 margin: 0 auto;
 margin-top: ${p=>p.theme.spacing(6)};
-margin-bottom: ${p=>p.theme.spacing(6)};;
+margin-bottom: ${p=>p.theme.spacing(6)};
 padding: ${p => p.theme.spacing(10)};
 background-color: ${p => p.theme.colors.background};
 `
