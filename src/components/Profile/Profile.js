@@ -1,36 +1,46 @@
 import PropTypes from 'prop-types';
+import {ProfileWrapper, 
+        ProfileInfo,
+        ProfileAvatar,
+        ProfileName, 
+        ProfileEmail,
+        ProfileLocation,
+        ProfileStats,
+        ProfileStat,
+        ProfileTitleStat,
+        ProfileQuantity} from './Profile.slyled';
 
 
 export const Profile = ({username, tag, location, avatar, stats})=>{
 return (
 
-<div className="profile">
-  <div className="description">
-    <img
+<ProfileWrapper>
+  <ProfileInfo>
+    < ProfileAvatar
       src={avatar}
       alt={username}
       className="avatar"
     />
-    <p className="name">{username}</p>
-    <p className="tag">@{tag}</p>
-    <p className="location">{location}</p>
-  </div>
+    <ProfileName>{username}</ProfileName>
+    <ProfileEmail>@{tag}</ProfileEmail>
+    <ProfileLocation>{location}</ProfileLocation>
+  </ProfileInfo>
 
-  <ul className="stats">
-    <li>
-      <span className="label">Followers</span>
-      <span className="quantity">{stats.followers}</span>
-    </li>
-    <li>
-      <span className="label">Views</span>
-      <span className="quantity">{stats.views}</span>
-    </li>
-    <li>
-      <span className="label">Likes</span>
-      <span className="quantity">{stats.likes}</span>
-    </li>
-  </ul>
-</div>
+  <ProfileStats>
+    <ProfileStat>
+      <ProfileTitleStat>Followers</ProfileTitleStat>
+      <ProfileQuantity>{stats.followers}</ProfileQuantity>
+    </ProfileStat>
+    <ProfileStat>
+      <ProfileTitleStat>Views</ProfileTitleStat>
+      <ProfileQuantity>{stats.views}</ProfileQuantity>
+    </ProfileStat>
+    <ProfileStat>
+      <ProfileTitleStat>Likes</ProfileTitleStat>
+      <ProfileQuantity>{stats.likes}</ProfileQuantity>
+    </ProfileStat>
+  </ProfileStats>
+</ProfileWrapper>
 )
 }
 
