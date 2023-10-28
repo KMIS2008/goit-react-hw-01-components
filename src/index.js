@@ -16,6 +16,7 @@ const theme = {
     rose: '#f2ead1',
     purpel: 'rgb(190 69 163)',
     red: 'rgb(231 13 13)',
+    green: '#17b717',
   },
 
   spacing: value => `${value * 5}px`,
