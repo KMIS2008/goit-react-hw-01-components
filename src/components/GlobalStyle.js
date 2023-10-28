@@ -15,6 +15,15 @@ export const GlobalStyle = createGlobalStyle`
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+
+  table, td {
+  border: 1px solid #b5b5d6; 
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
   ul {
   list-style: none;
   margin-top: 0;
